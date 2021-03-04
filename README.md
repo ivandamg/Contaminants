@@ -1,8 +1,9 @@
-# Contaminants identification with MASH https://mash.readthedocs.io/en/latest/
 
-#1 . IDENTIFY BATERIA ENDOSYMBIONTS
 
- 1. Identify contaminants of genome assemblies with MASH
+# 1 . IDENTIFY BATERIA ENDOSYMBIONTS
+
+ 1. Identify contaminants of genome assemblies with MASH  https://mash.readthedocs.io/en/latest/
+
 
 
        /scratch/wally/FAC/FBM/DEE/isanders/popgen_to_var/IM/Soft/mash-Linux64-v2.2/mash sketch -o References_glomero6 *
@@ -30,12 +31,12 @@ The fields ouptut are [identity, shared-hashes, median-multiplicity, p-value, qu
 using script :Containment_detection_script_v1.R
 
 
-#2 Extract genome of endosymbiont from raw reads.
+# 2 Extract genome of endosymbiont from raw reads.
 
 
-#3. Identify if endosymbiont present in other fungi. identify in which clade is always present.
+# 3. Identify if endosymbiont present in other fungi. identify in which clade is always present.
 
-#4 compare genome to the one of bettles and other organisms.
+# 4 compare genome to the one of bettles and other organisms.
 
 
 
