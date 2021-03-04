@@ -31,7 +31,19 @@ The fields ouptut are [identity, shared-hashes, median-multiplicity, p-value, qu
 using script :Containment_detection_script_v1.R
 
 
-# 2 Extract genome of endosymbiont from raw reads.
+# 2 Extract genome of endosymbiont from raw reads. denovo assembly with metaSPAdes 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5411777/
+
+    de novo assembly with SPADES http://cab.spbu.ru/files/release3.13.0/manual.html#sec3.5
+
+     /scratch/wally/FAC/FBM/DEE/isanders/popgen_to_var/IM/Soft/SPAdes-3.15.1-Linux/bin/metaspades.py -1 GC067279_R1_fastq.gz_trimmed.fq.gz  -2 GC067279_R1_R2_fastq.gz_trimmed.fq.gz  -k 21,33,55,77 -o 01_A1_MetaSPAdes/
+
+for all files
+
+            for i in $(ls *_R1_val_1.fq.gz); do echo $i ; ~/Documents/software/SPAdes-3.13.0-Linux/bin/spades.py -1 $i  -2 $(echo $i | cut -d'_' -f1)_R2_val_2.fq.gz   -k 21,33,55,77,99,127 --careful --cov-cutoff auto -o 03_denovoAssembly/$(echo $i | cut -d'_' -f1)/ ; done
+
+3b. denovo plasmid assembly
+
 
 
 # 3. Identify if endosymbiont present in other fungi. identify in which clade is always present.
