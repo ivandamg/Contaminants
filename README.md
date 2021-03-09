@@ -28,6 +28,15 @@ The fields ouptut are [identity, shared-hashes, median-multiplicity, p-value, qu
 
 3. Add file name to the end of string and concatenate all files
 
+
+
+#2 ORthology analysis
+
+
+concatenate different genes of the same samples of multi-fasta file 
+
+https://users-birc.au.dk/palle/php/fabox/alignment_joiner.php#
+
               for i in $(ls *.tab); do echo $i; sed "s/.*/&\\t$(echo $i |cut -d'.' -f1 | cut -d'_' -f3,4,5)/" $i > tmp ; mv tmp ScreenV2_$(echo $i |cut -d'.' -f1 | cut -d'_' -f3,4,5).tab; done
               
               cat ScreenV2_* > ALL_Glomeromycota_Screen_v1.out
