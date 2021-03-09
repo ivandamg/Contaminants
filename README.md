@@ -30,12 +30,6 @@ The fields ouptut are [identity, shared-hashes, median-multiplicity, p-value, qu
 
 
 
-#2 ORthology analysis
-
-
-concatenate different genes of the same samples of multi-fasta file 
-
-https://users-birc.au.dk/palle/php/fabox/alignment_joiner.php#
 
               for i in $(ls *.tab); do echo $i; sed "s/.*/&\\t$(echo $i |cut -d'.' -f1 | cut -d'_' -f3,4,5)/" $i > tmp ; mv tmp ScreenV2_$(echo $i |cut -d'.' -f1 | cut -d'_' -f3,4,5).tab; done
               
@@ -68,3 +62,9 @@ for all files
 #5. Comparison of gene expression in different structures of AMF KAMEOKA.
 
 
+#2 ORthology analysis
+
+
+concatenate different genes of the same samples of multi-fasta file 
+
+https://users-birc.au.dk/palle/php/fabox/alignment_joiner.php#
